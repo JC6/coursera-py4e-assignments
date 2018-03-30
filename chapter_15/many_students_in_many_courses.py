@@ -4,7 +4,6 @@ import sqlite3
 conn = sqlite3.connect('roster.sqlite')
 cur = conn.cursor()
 
-# Do some setup
 cur.executescript('''
 DROP TABLE IF EXISTS User;
 DROP TABLE IF EXISTS Member;
@@ -31,14 +30,8 @@ CREATE TABLE Member (
 file_name = input('Enter file name: ')
 if len(file_name) < 1:
     file_name = 'roster_data.json'
-
-# [
-#   [ "Charley", "si110", 1 ],
-#   [ "Mea", "si110", 0 ],
-
 str_data = open(file_name).read()
 json_data = json.loads(str_data)
-
 for entry in json_data:
     name = entry[0]
     title = entry[1]
