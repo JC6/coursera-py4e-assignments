@@ -1,5 +1,7 @@
 import json
-import urllib.request, urllib.parse
+# noinspection PyUnresolvedReferences
+import urllib.parse
+import urllib.request
 
 service_url = 'http://py4e-data.dr-chuck.net/geojson?'
 address = input('Enter location: ')
