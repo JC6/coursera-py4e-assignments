@@ -1,6 +1,5 @@
-# Use the file name mbox-short.txt as the file name
-fname = input("Enter file name: ")
-fh = open(fname)
+file_name = input("Enter file name: ")
+fh = open(file_name)
 s = 0
 count = 0
 for line in fh:
