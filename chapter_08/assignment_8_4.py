@@ -1,5 +1,5 @@
-fname = input("Enter file name: ")
-fh = open(fname)
+file_name = input("Enter file name: ")
+fh = open(file_name)
 lst = list()
 for line in fh:
     words = line.split()
